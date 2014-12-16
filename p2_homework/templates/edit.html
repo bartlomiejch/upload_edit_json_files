@@ -1,0 +1,7 @@
+<!-- Edit form - edit the value of .json file-->
+{%  for key, value in mydata.items %}
+<form method="POST">{% csrf_token %}
+    <textarea name="content">{{value}}</textarea>
+    <input type="submit" value="Zapisz">
+</form>
+{%  endfor  %}

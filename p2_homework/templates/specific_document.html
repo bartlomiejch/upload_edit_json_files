@@ -1,0 +1,10 @@
+<table>
+	<!-- name, value and date of publication of uploaded documents -->
+	{% for name, item in mydata.items %}
+<tr><td>{{  name  }}</td>
+    <td>{{  item  }}</td>
+    <td>Data dodania: {{  document.pubdate  }}</td>
+</tr>
+{%  endfor  %}
+</table>
+      <a href="{% url 'p2_homework.views.edit' document.id %}">Edycja wartości</a></p>
